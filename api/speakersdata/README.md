@@ -1,19 +1,22 @@
-speakersdata
-============
+#speakersdata
 
+Available Methods:
 
+* `GET api/speakersdata`
+* `GET api/speakersdata/{id}`
 
-GET api/speakersdata
-Request Information
-URI Parameters
-None
+##GET api/speakersdata
 
-Body Parameters
-None
+###Request Information
+__URI Parameters__
+* None
 
-Response Information
-Resource Description
-Collection Of PublicSpeakerDataModel
+__Body Parameters__
+* None
+
+###Response Information
+####Resource Description
+Collection of `PublicSpeakerDataModel`
 
 | Name | Description | Type |
 |----|-----------|----|
@@ -23,9 +26,48 @@ Collection Of PublicSpeakerDataModel
 | Biography  | Speaker-provided biography. May be long | string |
 | GravatarUrl | URL to speaker image based on provided image | string |
 
+####Response Formats
 
-<Biography>Joe is a full stack software developer from Kansas City. He has professional experience training hundreds of software developers about how to take advantage of Node.js through his organization called NodeLabs. He is continuously seeking to learn and find ways to share his experiences.</Biography>
-<FirstName>Joseph</FirstName>
-<GravatarUrl>//www.gravatar.com/avatar/20bcd9c84412ff9a04188982293ca539</GravatarUrl>
-<Id>a02a0671-98a9-4365-a7b5-b963c6b4b046</Id>
-<LastName>Andaverde</LastName>
+__application/json, text/json__
+```
+[
+    {
+        "Id": "a02a0671-98a9-4365-a7b5-b963c6b4b046",
+        "FirstName": "Sample String 1",
+        "LastName": "Sample String 2",
+        "Biography": "A (potentially) really long Sample String",
+        "GravatarUrl": "//www.gravatar.com/avatar/06f6516772eca8763479753e2746e328"
+    },
+    {
+        "Id": "0d77e7b9-8315-4197-a135-6091933cbda0",
+        "FirstName": "Sample String 1",
+        "LastName": "Sample String 2",
+        "Biography": "A (potentially) really long Sample String",
+        "GravatarUrl": "//www.gravatar.com/avatar/25ddbfa83fef9e5f8f1e15c73d1de9e1"
+    }
+]
+```
+
+__application/xml, text/xml__
+```
+<ArrayOfPublicSpeakerDataModel>
+    <PublicSpeakerDataModel>
+        <Id>a02a0671-98a9-4365-a7b5-b963c6b4b046</Id>
+        <FirstName>Sample String 1</FirstName>
+        <LastName>Sample String 2</LastName>
+        <Biography>A (potentially) really long Sample String</Biography>
+        <GravatarUrl>
+            //www.gravatar.com/avatar/06f6516772eca8763479753e2746e328
+        </GravatarUrl>
+    </PublicSpeakerDataModel>
+    <PublicSpeakerDataModel>
+        <Id>0d77e7b9-8315-4197-a135-6091933cbda0</Id>
+        <FirstName>Sample String 1</FirstName>
+        <LastName>Sample String 2</LastName>
+        <Biography>A (potentially) really long Sample String</Biography>
+        <GravatarUrl>
+            //www.gravatar.com/avatar/25ddbfa83fef9e5f8f1e15c73d1de9e1
+        </GravatarUrl>
+    </PublicSpeakerDataModel>
+</ArrayOfPublicSpeakerDataModel>
+```
