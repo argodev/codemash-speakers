@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CodeMash Speakers</title>
+</head>
+<body>
+    <div id="progress">
+        Loading the data...
+
+        <p><small>(If I were any good at web development, this would be a fancy animated gif...)</small></p>
+    </div>
+    <div id="speakers">
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'https://cmprod-speakers.azurewebsites.net/api/speakersdata';
+
+        $(document).ready(function () {
+            $.getJSON(uri)
+                    .done(function (data) {
+                        $('#progress').hide();
+                        $.each(data, function (key, item) {
+                            $(formatItem(item)).appendTo($('#speakers'));
+                        });
+                    });
+        });
+
+        function formatItem(item) {
+            // Yes, Jay, I know... I stink at both javascript and web page layout. I'm sorry. Please forgive me.
+            // At least it isn't a table.
+            // I promise to leave your wifi alone...
+            var v1 = "<div class='speakerContainer'>";
+            v1 +=      "<div style='float: left;'><img src='https://" + item.GravatarUrl + "?s=200' style='margin-right: 10px; margin-bottom: 10px;' /></div>";
+            v1 +=      "<div style='margin-left: 225px;'><h5>" + item.LastName + ', ' + item.FirstName + "</h5><p>" + item.Biography + "</p></div>";
+            v1 +=      "<div style='clear: both; padding-bottom: 25px;'></div>";
+            v1 +=    "</div>";
+            return v1;
+        }
+    </script>
+</body>
+</html>
