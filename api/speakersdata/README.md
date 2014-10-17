@@ -27,7 +27,7 @@ Collection of `PublicSpeakerDataModel`
 | FirstName   | Speaker's first name                         | string | 
 | LastName    | Speaker's last name                          | string |
 | Biography   | Speaker-provided biography. May be long      | string |
-| GravatarUrl | URL to speaker image based on provided image | string |
+| GravatarUrl | URL to speaker image based on provided email | string |
 
 ####Response Formats
 
@@ -99,7 +99,7 @@ Instance of `PublicSpeakerDataModel`
 | FirstName   | Speaker's first name                         | string | 
 | LastName    | Speaker's last name                          | string |
 | Biography   | Speaker-provided biography. May be long      | string |
-| GravatarUrl | URL to speaker image based on provided image | string |
+| GravatarUrl | URL to speaker image based on provided email | string |
 
 ####Response Formats
 
