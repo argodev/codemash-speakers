@@ -28,6 +28,10 @@ Collection of `PublicSpeakerDataModel`
 | LastName    | Speaker's last name                          | string |
 | Biography   | Speaker-provided biography. May be long      | string |
 | GravatarUrl | URL to speaker image based on provided email | string |
+| TwitterLink | Link to speaker's twitter profile            | string |
+| GitHubLink  | Link to speaker's Github home page           | string |
+| LinkedInProfile | Link to speaker's LinkedIn Profile       | string |
+| BlogUrl     | Link to speaker's blog/homepage              | string |
 
 ####Response Formats
 
@@ -39,14 +43,22 @@ __application/json, text/json__
         "FirstName": "Sample String 1",
         "LastName": "Sample String 2",
         "Biography": "A (potentially) really long Sample String",
-        "GravatarUrl": "//www.gravatar.com/avatar/06f6516772eca8763479753e2746e328"
+        "GravatarUrl": "//www.gravatar.com/avatar/06f6516772eca8763479753e2746e328",
+        "TwitterLink": null,
+        "GitHubLink": null,
+        "LinkedInProfile": null,
+        "BlogUrl": null
     },
     {
         "Id": "0d77e7b9-8315-4197-a135-6091933cbda0",
         "FirstName": "Sample String 1",
         "LastName": "Sample String 2",
         "Biography": "A (potentially) really long Sample String",
-        "GravatarUrl": "//www.gravatar.com/avatar/25ddbfa83fef9e5f8f1e15c73d1de9e1"
+        "GravatarUrl": "//www.gravatar.com/avatar/25ddbfa83fef9e5f8f1e15c73d1de9e1",
+        "TwitterLink": null,
+        "GitHubLink": null,
+        "LinkedInProfile": null,
+        "BlogUrl": null
     }
 ]
 ```
@@ -62,6 +74,10 @@ __application/xml, text/xml__
         <GravatarUrl>
             //www.gravatar.com/avatar/06f6516772eca8763479753e2746e328
         </GravatarUrl>
+        <BlogUrl i:nil="true"/>
+        <GitHubLink i:nil="true"/>
+        <LinkedInProfile i:nil="true"/>
+        <TwitterLink i:nil="true"/>
     </PublicSpeakerDataModel>
     <PublicSpeakerDataModel>
         <Id>0d77e7b9-8315-4197-a135-6091933cbda0</Id>
@@ -71,6 +87,10 @@ __application/xml, text/xml__
         <GravatarUrl>
             //www.gravatar.com/avatar/25ddbfa83fef9e5f8f1e15c73d1de9e1
         </GravatarUrl>
+        <BlogUrl i:nil="true"/>
+        <GitHubLink i:nil="true"/>
+        <LinkedInProfile i:nil="true"/>
+        <TwitterLink i:nil="true"/>
     </PublicSpeakerDataModel>
 </ArrayOfPublicSpeakerDataModel>
 ```
@@ -100,6 +120,11 @@ Instance of `PublicSpeakerDataModel`
 | LastName    | Speaker's last name                          | string |
 | Biography   | Speaker-provided biography. May be long      | string |
 | GravatarUrl | URL to speaker image based on provided email | string |
+| TwitterLink | Link to speaker's twitter profile            | string |
+| GitHubLink  | Link to speaker's Github home page           | string |
+| LinkedInProfile | Link to speaker's LinkedIn Profile       | string |
+| BlogUrl     | Link to speaker's blog/homepage              | string |
+
 
 ####Response Formats
 
@@ -110,7 +135,11 @@ __application/json, text/json__
     "FirstName": "Sample String 1",
     "LastName": "Sample String 2",
     "Biography": "A (potentially) really long Sample String",
-    "GravatarUrl": "//www.gravatar.com/avatar/06f6516772eca8763479753e2746e328"
+    "GravatarUrl": "//www.gravatar.com/avatar/06f6516772eca8763479753e2746e328",
+    "TwitterLink": null,
+    "GitHubLink": null,
+    "LinkedInProfile": null,
+    "BlogUrl": null
 }
 ```
 
@@ -124,5 +153,9 @@ __application/xml, text/xml__
     <GravatarUrl>
         //www.gravatar.com/avatar/06f6516772eca8763479753e2746e328
     </GravatarUrl>
+    <BlogUrl i:nil="true"/>
+    <GitHubLink i:nil="true"/>
+    <LinkedInProfile i:nil="true"/>
+    <TwitterLink i:nil="true"/>
 </PublicSpeakerDataModel>
 ```

@@ -24,12 +24,15 @@ Collection of `PublicSessionDataModel`
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this session                   | int    |
+| SessionTime | Date/Time the session will start ISO Format  | date   |
+| Room        | Name of the room the session will be in      | string |
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
 | Tags        | 0 or more tags describing the session        | collection of strings |
 | Speakers    | 0 or more speakers for this session | collection of PublicSpeakerThinDataModel |
 
+**Note**: Some fields such as SessionTime and Room will remain at their type-specific default values until that data becomes available.
 
 `PublicSpeakerThinDataModel`
 
@@ -48,6 +51,8 @@ __application/json, text/json__
 [
     {
         "Id": 1,
+        "SessionTime": "0001-01-01T00:00:00",
+        "Room": null,
         "Title": "Sample String 1",
         "Abstract": "Sample long string",
         "SessionType": "Regular Session",
@@ -65,6 +70,8 @@ __application/json, text/json__
     },
     {
         "Id": 2,
+        "SessionTime": "0001-01-01T00:00:00",
+        "Room": null,
         "Title": "Sample String 1",
         "Abstract": "Sample long string",
         "SessionType": "Pre-Compiler",
@@ -97,6 +104,8 @@ __application/xml, text/xml__
 <ArrayOfPublicSessionDataModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/CodeMash.Speakers.Web.Models">
     <PublicSessionDataModel>
         <Id>1</Id>
+        <Room i:nil="true"/>
+        <SessionTime>0001-01-01T00:00:00</SessionTime>
         <Title>Sample String 1</Title>
         <Abstract>Sample long string</Abstract>
         <SessionType>Regular Session</SessionType>
@@ -114,6 +123,8 @@ __application/xml, text/xml__
     </PublicSessionDataModel>
     <PublicSessionDataModel>
         <Id>2</Id>
+        <Room i:nil="true"/>
+        <SessionTime>0001-01-01T00:00:00</SessionTime>
         <Title>Sample String 1</Title>
         <Abstract>Sample long string</Abstract>
         <SessionType>Pre-Compiler</SessionType>
@@ -162,6 +173,8 @@ Instance of `PublicSessionDataModel`
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this session                   | int    |
+| SessionTime | Date/Time the session will start ISO Format  | date   |
+| Room        | Name of the room the session will be in      | string |
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
@@ -185,6 +198,8 @@ __application/json, text/json__
 ```
 {
     "Id": 1,
+    "SessionTime": "0001-01-01T00:00:00",
+    "Room": null,
     "Title": "Sample String 1",
     "Abstract": "Sample long string",
     "SessionType": "Regular Session",
@@ -206,6 +221,8 @@ __application/xml, text/xml__
 ```
 <PublicSessionDataModel>
     <Id>1</Id>
+    <Room i:nil="true"/>
+    <SessionTime>0001-01-01T00:00:00</SessionTime>
     <Title>Sample String 1</Title>
     <Abstract>Sample long string</Abstract>
     <SessionType>Regular Session</SessionType>
