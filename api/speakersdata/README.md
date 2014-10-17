@@ -81,6 +81,7 @@ __application/xml, text/xml__
 
 ###Request Information
 __URI Parameters__
+
 | Name        | Description                | Type   | Additional Information |
 |-------------|----------------------------|--------|------------------------|
 | Id          | Unique ID for the speaker  | string | Required               |
