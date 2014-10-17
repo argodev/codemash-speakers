@@ -27,11 +27,12 @@ Collection of `PublicSessionDataModel`
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
-| Tags        | O or more tags describing the session        | collection of strings |
-| Speakers    | 0 or more speakers for this session | Collection of PublicSpeakerThinDataModel |
+| Tags        | 0 or more tags describing the session        | collection of strings |
+| Speakers    | 0 or more speakers for this session | collection of PublicSpeakerThinDataModel |
 
 
 `PublicSpeakerThinDataModel`
+
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this speaker                   | string |
@@ -164,11 +165,12 @@ Instance of `PublicSessionDataModel`
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
-| Tags        | O or more tags describing the session        | collection of strings |
-| Speakers    | 0 or more speakers for this session | Collection of PublicSpeakerThinDataModel |
+| Tags        | 0 or more tags describing the session        | collection of strings |
+| Speakers    | 0 or more speakers for this session | collection of PublicSpeakerThinDataModel |
 
 
 `PublicSpeakerThinDataModel`
+
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this speaker                   | string |
