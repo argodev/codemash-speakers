@@ -3,7 +3,10 @@
 Available Methods:
 
 * [`GET api/speakersdata`](#get-apispeakersdata)
-* `GET api/speakersdata/{id}`
+* [`GET api/speakersdata/{id}`](#get-apispeakersdataid)
+
+Examples:
+* Simple html example: [../examples/speakers.html](../examples/speakers.html)
 
 ##GET api/speakersdata
 
@@ -73,11 +76,14 @@ __application/xml, text/xml__
 ```
 
 
+
 ##GET api/speakersdata/{id}
 
 ###Request Information
 __URI Parameters__
-* None
+| Name        | Description                | Type   | Additional Information |
+|-------------|----------------------------|--------|------------------------|
+| Id          | Unique ID for the speaker  | string | Required               |
 
 __Body Parameters__
 * None
