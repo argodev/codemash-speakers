@@ -114,8 +114,12 @@ __application/xml, text/xml__
 <ArrayOfPublicSessionDataModel xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/CodeMash.Speakers.Web.Models">
     <PublicSessionDataModel>
         <Id>1</Id>
-        <Room i:nil="true"/>
-        <SessionTime>0001-01-01T00:00:00</SessionTime>
+        <Rooms xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+            <d3p1:string>Zambezi</d3p1:string>
+            <d3p1:string>Nile</d3p1:string>
+        </Rooms>
+        <SessionStartTime>2015-01-08T08:00:00</SessionStartTime>
+        <SessionEndTime>2015-01-08T09:00:00</SessionEndTime>
         <Title>Sample String 1</Title>
         <Abstract>Sample long string</Abstract>
         <SessionType>Regular Session</SessionType>
@@ -133,8 +137,11 @@ __application/xml, text/xml__
     </PublicSessionDataModel>
     <PublicSessionDataModel>
         <Id>2</Id>
-        <Room i:nil="true"/>
-        <SessionTime>0001-01-01T00:00:00</SessionTime>
+        <Rooms xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+            <d3p1:string>Zambezi</d3p1:string>
+        </Rooms>
+        <SessionStartTime>2015-01-09T10:15:00</SessionStartTime>
+        <SessionEndTime>2015-01-09T11:15:00</SessionEndTime>
         <Title>Sample String 1</Title>
         <Abstract>Sample long string</Abstract>
         <SessionType>Pre-Compiler</SessionType>
@@ -183,8 +190,11 @@ Instance of `PublicSessionDataModel`
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this session                   | int    |
-| SessionTime | Date/Time the session will start ISO Format  | date   |
-| Room        | Name of the room the session will be in      | string |
+| ~~SessionTime~~ | ~~Date/Time the session will start ISO Format~~  | ~~date~~   |
+| SessionStartTime | Date/Time the session will start in ISO Format  | date  |
+| SessionEndTime | Date/Time the session will end in ISO Format  | date  |
+| ~~Room~~        | ~~Name of the room the session will be in~~      | ~~string~~ |
+| Rooms       | 0 or more names of the room(s) the session will be in | string |
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
@@ -208,8 +218,12 @@ __application/json, text/json__
 ```
 {
     "Id": 1,
-    "SessionTime": "0001-01-01T00:00:00",
-    "Room": null,
+    "SessionStartTime": "2015-01-08T08:00:00",
+    "SessionEndTime": "2015-01-08T09:00:00",
+    "Rooms": [
+        "Zambezi",
+        "Nile"
+    ],
     "Title": "Sample String 1",
     "Abstract": "Sample long string",
     "SessionType": "Regular Session",
@@ -231,8 +245,11 @@ __application/xml, text/xml__
 ```
 <PublicSessionDataModel>
     <Id>1</Id>
-    <Room i:nil="true"/>
-    <SessionTime>0001-01-01T00:00:00</SessionTime>
+    <Rooms xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+        <d3p1:string>Zambezi</d3p1:string>
+    </Rooms>
+    <SessionStartTime>2015-01-09T10:15:00</SessionStartTime>
+    <SessionEndTime>2015-01-09T11:15:00</SessionEndTime>
     <Title>Sample String 1</Title>
     <Abstract>Sample long string</Abstract>
     <SessionType>Regular Session</SessionType>
