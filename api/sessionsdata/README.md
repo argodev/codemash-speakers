@@ -24,15 +24,18 @@ Collection of `PublicSessionDataModel`
 | Name        | Description                                  | Type   |
 |-------------|----------------------------------------------|--------|
 | Id          | Unique ID for this session                   | int    |
-| SessionTime | Date/Time the session will start ISO Format  | date   |
-| Room        | Name of the room the session will be in      | string |
+| ~~SessionTime~~ | ~~Date/Time the session will start ISO Format~~  | ~~date~~   |
+| SessionStartTime | Date/Time the session will start in ISO Format  | date  |
+| SessionEndTime | Date/Time the session will end in ISO Format  | date  |
+| ~~Room~~        | ~~Name of the room the session will be in~~      | ~~string~~ |
+| Rooms       | 0 or more names of the room(s) the session will be in | string |
 | Title       | Title of the session                         | string |
 | Abstract    | Abstract for the session. May be long.       | string |
 | SessionType | Type of session. Fixed set of strings.       | string |
 | Tags        | 0 or more tags describing the session        | collection of strings |
 | Speakers    | 0 or more speakers for this session | collection of PublicSpeakerThinDataModel |
 
-**Note**: Some fields such as SessionTime and Room will remain at their type-specific default values until that data becomes available.
+**Note**: Some fields such as SessionStartTime, SessionEndTime and Rooms will remain at their type-specific default values until that data becomes available.
 
 `PublicSpeakerThinDataModel`
 
@@ -51,8 +54,12 @@ __application/json, text/json__
 [
     {
         "Id": 1,
-        "SessionTime": "0001-01-01T00:00:00",
-        "Room": null,
+        "SessionStartTime": "2015-01-08T08:00:00",
+        "SessionEndTime": "2015-01-08T09:00:00",
+        "Rooms": [
+            "Zambezi",
+            "Nile"
+        ],
         "Title": "Sample String 1",
         "Abstract": "Sample long string",
         "SessionType": "Regular Session",
@@ -70,8 +77,11 @@ __application/json, text/json__
     },
     {
         "Id": 2,
-        "SessionTime": "0001-01-01T00:00:00",
-        "Room": null,
+        "SessionStartTime": "2015-01-09T10:15:00",
+        "SessionEndTime": "2015-01-09T11:15:00",
+        "Rooms": [
+            "Zambezi"
+        ],
         "Title": "Sample String 1",
         "Abstract": "Sample long string",
         "SessionType": "Pre-Compiler",
