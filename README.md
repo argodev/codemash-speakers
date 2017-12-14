@@ -1,5 +1,4 @@
-codemash-speakers
-=================
+# CodeMash Speakers
 
 This repo hosts the tools supporting our speaker management system at CodeMash.
 

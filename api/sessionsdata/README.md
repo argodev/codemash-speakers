@@ -1,4 +1,4 @@
-#sessionsdata
+# Sessions Data
 
 Available Methods:
 
@@ -8,17 +8,17 @@ Available Methods:
 Examples:
 * Simple html example: [../examples/sessions.html](../examples/sessions.html)
 
-##GET api/sessionsdata
+## GET api/sessionsdata
 
-###Request Information
+### Request Information
 __URI Parameters__
 * None
 
 __Body Parameters__
 * None
 
-###Response Information
-####Resource Description
+### Response Information
+#### Resource Description
 Collection of `PublicSessionDataModel`
 
 | Name        | Description                                  | Type   |
@@ -47,7 +47,7 @@ Collection of `PublicSessionDataModel`
 | Biography   | Speaker-provided biography. May be long      | string |
 | GravatarUrl | URL to speaker image based on provided email | string |
 
-####Response Formats
+#### Response Formats
 
 __application/json, text/json__
 ```
@@ -171,9 +171,9 @@ __application/xml, text/xml__
 
 
 
-##GET api/sessionsdata/{id}
+## GET api/sessionsdata/{id}
 
-###Request Information
+### Request Information
 __URI Parameters__
 
 | Name        | Description                | Type   | Additional Information |
@@ -183,8 +183,8 @@ __URI Parameters__
 __Body Parameters__
 * None
 
-###Response Information
-####Resource Description
+### Response Information
+#### Resource Description
 Instance of `PublicSessionDataModel`
 
 | Name        | Description                                  | Type   |
@@ -212,7 +212,7 @@ Instance of `PublicSessionDataModel`
 | Biography   | Speaker-provided biography. May be long      | string |
 | GravatarUrl | URL to speaker image based on provided email | string |
 
-####Response Formats
+#### Response Formats
 
 __application/json, text/json__
 ```

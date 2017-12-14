@@ -1,4 +1,4 @@
-#speakersdata
+# Speakers Data
 
 Available Methods:
 
@@ -8,17 +8,17 @@ Available Methods:
 Examples:
 * Simple html example: [../examples/speakers.html](../examples/speakers.html)
 
-##GET api/speakersdata
+## GET api/speakersdata
 
-###Request Information
+### Request Information
 __URI Parameters__
 * None
 
 __Body Parameters__
 * None
 
-###Response Information
-####Resource Description
+### Response Information
+#### Resource Description
 Collection of `PublicSpeakerDataModel`
 
 | Name        | Description                                  | Type   |
@@ -33,7 +33,7 @@ Collection of `PublicSpeakerDataModel`
 | LinkedInProfile | Link to speaker's LinkedIn Profile       | string |
 | BlogUrl     | Link to speaker's blog/homepage              | string |
 
-####Response Formats
+#### Response Formats
 
 __application/json, text/json__
 ```
@@ -97,9 +97,9 @@ __application/xml, text/xml__
 
 
 
-##GET api/speakersdata/{id}
+## GET api/speakersdata/{id}
 
-###Request Information
+### Request Information
 __URI Parameters__
 
 | Name        | Description                | Type   | Additional Information |
@@ -109,8 +109,8 @@ __URI Parameters__
 __Body Parameters__
 * None
 
-###Response Information
-####Resource Description
+### Response Information
+#### Resource Description
 Instance of `PublicSpeakerDataModel`
 
 | Name        | Description                                  | Type   |
@@ -126,7 +126,7 @@ Instance of `PublicSpeakerDataModel`
 | BlogUrl     | Link to speaker's blog/homepage              | string |
 
 
-####Response Formats
+#### Response Formats
 
 __application/json, text/json__
 ```
